@@ -16,7 +16,7 @@ class BinaryMobileNet(nn.Module):
 @st.cache_resource
 def load_model():
     model = BinaryMobileNet()
-    model.load_state_dict(torch.load("mobilenet_skin_cancer.pth", map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load("mobilenet_skin_binary.pth", map_location=torch.device('cpu')))
     model.eval()
     return model
 model = load_model()
