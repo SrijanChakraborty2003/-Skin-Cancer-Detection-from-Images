@@ -36,4 +36,3 @@ if uploaded_file is not None:
         prob = torch.sigmoid(output).item()
         prediction = "Cancer Detected" if prob >= 0.5 else "No Cancer Detected"
         st.write(f"### Prediction: {prediction}")
-        st.write(f"Confidence: {prob:.4f}")
